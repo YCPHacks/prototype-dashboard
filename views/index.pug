@@ -1,0 +1,11 @@
+doctype html
+head
+body
+  form
+    select(name=`${user}`)
+      option(value="user" selected=(id === "rol_IoBAUGaE6NsddNWI")) user
+      option(value="admin" selected=(id === "rol_L442H1hd8nuOcECs")) administrator
+      option(value="sponsor" selected=(id === "rol_7fgaz6vBKW3qv8XU")) sponsor
+      option(value="team_manager" selected=(id === "rol_TxeO0iV52VTRhf7x")) team manager
+
+    button(type="Submit" action=`http://localhost:3001/api/users/${user}/roles` method="POST") Submit
